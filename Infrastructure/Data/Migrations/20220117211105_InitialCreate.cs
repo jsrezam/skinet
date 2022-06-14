@@ -14,10 +14,7 @@ namespace Infrastructure.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductBrands", x => x.Id);
-                });
+                constraints: table => table.PrimaryKey("PK_ProductBrands", x => x.Id));
 
             migrationBuilder.CreateTable(
                 name: "ProductTypes",
@@ -27,10 +24,7 @@ namespace Infrastructure.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductTypes", x => x.Id);
-                });
+                constraints: table => table.PrimaryKey("PK_ProductTypes", x => x.Id));
 
             migrationBuilder.CreateTable(
                 name: "Products",

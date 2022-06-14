@@ -20,10 +20,7 @@ namespace Infrastructure.Data
                     var brandsData = File.ReadAllText("../Infrastructure/Data/SeedData/brands.json");
                     var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
 
-                    foreach (var brand in brands)
-                    {
-                        context.ProductBrands.Add(brand);
-                    }
+                    context.ProductBrands.AddRange(brands);
 
                     await context.SaveChangesAsync();
                 }
@@ -33,10 +30,7 @@ namespace Infrastructure.Data
                     var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
                     var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
 
-                    foreach (var type in types)
-                    {
-                        context.ProductTypes.Add(type);
-                    }
+                    context.ProductTypes.AddRange(types);
 
                     await context.SaveChangesAsync();
                 }
@@ -46,10 +40,7 @@ namespace Infrastructure.Data
                     var productData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
                     var products = JsonSerializer.Deserialize<List<Product>>(productData);
 
-                    foreach (var product in products)
-                    {
-                        context.Products.Add(product);
-                    }
+                    context.Products.AddRange(products);
 
                     await context.SaveChangesAsync();
                 }
