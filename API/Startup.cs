@@ -34,7 +34,7 @@ namespace API
                 {
                     policy.AllowAnyHeader()
                     .AllowAnyMethod()
-                    .WithOrigins("https:localhost:4200");
+                    .WithOrigins("https://localhost:4200");
                 });
             });
         }
