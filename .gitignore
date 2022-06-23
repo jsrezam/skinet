@@ -3,3 +3,5 @@ bin
 appsetting.json
 *.db
 nuget.config
+*.db
+*.rdb
